@@ -5,6 +5,8 @@ export default function Counter() {
     const countRef = useRef(count)
 
     useEffect(() => {
+        const diff = count - countRef.current
+        console.log(`diff ${diff}`)
         countRef.current = count       
     })
   return (
